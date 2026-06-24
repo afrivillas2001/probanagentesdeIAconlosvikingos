@@ -1,0 +1,119 @@
+<!--- 
+HTML donde se esta maquetando todo el proyecto
+--->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hitos del pueblo vikingo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <meta name="description" content="Cinco hitos históricos del pueblo vikingo explicados brevemente con imágenes ilustrativas." />
+</head>
+<body>
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <h1>Hitos del pueblo vikingo</h1>
+      <button id="toggleTheme" aria-label="Cambiar tema">🌙</button>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#milestones">Hitos</a></li>
+          <li><a href="#acerca">Acerca</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido" class="container" role="main">
+    <section id="milestones" aria-labelledby="milestones-title" class="milestones">
+      <h2 id="milestones-title" class="section-title">Cinco hitos del pueblo vikingo</h2>
+      <!-- Milestone 1 -->
+      <article class="milestone" aria-labelledby="ms1-title">
+        <h3 id="ms1-title" class="sr-only">Lindisfarne (793)</h3>
+        <figure class="milestone-figure" aria-label="Desembarco vikingo en Lindisfarne">
+          <div class="img-wrap">
+            <img src="imagenes/Lindisfarne.webp" alt="Barco vikingo desembarcando en Lindisfarne" />
+          </div>
+          <figcaption>
+            Lindisfarne marcó el inicio de la Edad Vikinga (793). Los ataques y saqueos en Inglaterra exhibieron la capacidad naval y el alcance de los raids vikingos.
+          </figcaption>
+        </figure>
+        <button class="open-frame" data-idx="0" aria-label="Ver en marco">Ver en marco</button>
+      </article>
+      <!-- Milestone 2 -->
+      <article class="milestone" aria-labelledby="ms2-title">
+        <h3 id="ms2-title" class="sr-only">Conquista de York</h3>
+        <figure class="milestone-figure" aria-label="Conquista de York y asentamientos en Inglaterra">
+          <div class="img-wrap">
+            <img src="imagenes/York.jpg" alt="Conquista de York y asentamientos vikingos en Jórvík" />
+          </div>
+          <figcaption>
+            865-874: Conquista de York (Jórvík) y asentamientos vikingos que fortalecieron el control noruego y danés en Inglaterra.
+          </figcaption>
+        </figure>
+        <button class="open-frame" data-idx="1" aria-label="Ver en marco">Ver en marco</button>
+      </article>
+      <!-- Milestone 3 -->
+      <article class="milestone" aria-labelledby="ms3-title">
+        <h3 id="ms3-title" class="sr-only">Ruta hacia el Rus</h3>
+        <figure class="milestone-figure" aria-label="Comercio vikingos con Rus y Bizancio">
+          <div class="img-wrap">
+            <img src="imagenes/Las rutas del Rus.png" alt="Ruta vikinga hacia Rus y comercio con Bizancio" />
+          </div>
+          <figcaption>
+            IX-X: Las rutas del Rus permitieron el intercambio con Bizancio y el desarrollo de ciudades como Novgorod y Kiev.
+          </figcaption>
+        </figure>
+        <button class="open-frame" data-idx="2" aria-label="Ver en marco">Ver en marco</button>
+      </article>
+      <!-- Milestone 4 -->
+      <article class="milestone" aria-labelledby="ms4-title">
+        <h3 id="ms4-title" class="sr-only">Vinland</h3>
+        <figure class="milestone-figure" aria-label="Exploraciones hacia Groenlandia y Vinland">
+          <div class="img-wrap">
+            <img src="imagenes/Groenlandia.jpg" alt="Exploraciones hacia Groenlandia y Vinland" />
+          </div>
+          <figcaption>
+            X: Exploración hacia Groenlandia y Vinland (descubrimientos en Norteamérica por Leif Erikson) expandieron el comercio y la curiosidad.
+          </figcaption>
+        </figure>
+        <button class="open-frame" data-idx="3" aria-label="Ver en marco">Ver en marco</button>
+      </article>
+      <!-- Milestone 5 -->
+      <article class="milestone" aria-labelledby="ms5-title">
+        <h3 id="ms5-title" class="sr-only">Cristianización</h3>
+        <figure class="milestone-figure" aria-label="Cristianización de Escandinavia">
+          <div class="img-wrap">
+            <img src="imagenes/Cristianización de Escandinavia.jpg" alt="Cristianización de Escandinavia" />
+          </div>
+          <figcaption>
+            siglo X-XI: Cristianización de Escandinavia y consolidación de reinos medievales (Dinamarca, Noruega, Suecia).
+          </figcaption>
+        </figure>
+        <button class="open-frame" data-idx="4" aria-label="Ver en marco">Ver en marco</button>
+      </article>
+    </section>
+    <section id="acerca" class="acerca" aria-labelledby="acerca-title">
+      <h2 id="acerca-title" class="section-title">Acerca de</h2>
+      <p>Este ejemplo presenta cinco hitos históricos del pueblo vikingo usando HTML5 semántico, CSS moderno y un poco de JavaScript para animaciones y tema oscuro.</p>
+    </section>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; 2026 Vikingos. Conocimiento histórico y visual. Ilustraciones propias (SVG).</p>
+    </div>
+  </footer>
+
+  <!-- Frame viewer (modal) -->
+  <div id="frameModal" class="frame-modal" aria-hidden="true" role="dialog" aria-label="Vista ampliada">
+    <div class="frame-content">
+      <button class="frame-close" aria-label="Cerrar">X</button>
+      <div id="frameInner" class="frame-inner"></div>
+    </div>
+  </div>
+</body>
+</html>
