@@ -1,119 +1,148 @@
-<!--- 
-HTML donde se esta maquetando todo el proyecto
---->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hitos del pueblo vikingo</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
-  <meta name="description" content="Cinco hitos históricos del pueblo vikingo explicados brevemente con imágenes ilustrativas." />
-</head>
-<body>
-  <a href="#contenido" class="skip-link">Saltar al contenido</a>
-  <header class="site-header" role="banner">
-    <div class="container">
-      <h1>Hitos del pueblo vikingo</h1>
-      <button id="toggleTheme" aria-label="Cambiar tema">🌙</button>
-      <nav aria-label="Navegación principal">
-        <ul class="nav-list">
-          <li><a href="#milestones">Hitos</a></li>
-          <li><a href="#acerca">Acerca</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="contenido" class="container" role="main">
-    <section id="milestones" aria-labelledby="milestones-title" class="milestones">
-      <h2 id="milestones-title" class="section-title">Cinco hitos del pueblo vikingo</h2>
-      <!-- Milestone 1 -->
-      <article class="milestone" aria-labelledby="ms1-title">
-        <h3 id="ms1-title" class="sr-only">Lindisfarne (793)</h3>
-        <figure class="milestone-figure" aria-label="Desembarco vikingo en Lindisfarne">
-          <div class="img-wrap">
-            <img src="imagenes/Lindisfarne.webp" alt="Barco vikingo desembarcando en Lindisfarne" />
-          </div>
-          <figcaption>
-            Lindisfarne marcó el inicio de la Edad Vikinga (793). Los ataques y saqueos en Inglaterra exhibieron la capacidad naval y el alcance de los raids vikingos.
-          </figcaption>
-        </figure>
-        <button class="open-frame" data-idx="0" aria-label="Ver en marco">Ver en marco</button>
-      </article>
-      <!-- Milestone 2 -->
-      <article class="milestone" aria-labelledby="ms2-title">
-        <h3 id="ms2-title" class="sr-only">Conquista de York</h3>
-        <figure class="milestone-figure" aria-label="Conquista de York y asentamientos en Inglaterra">
-          <div class="img-wrap">
-            <img src="imagenes/York.jpg" alt="Conquista de York y asentamientos vikingos en Jórvík" />
-          </div>
-          <figcaption>
-            865-874: Conquista de York (Jórvík) y asentamientos vikingos que fortalecieron el control noruego y danés en Inglaterra.
-          </figcaption>
-        </figure>
-        <button class="open-frame" data-idx="1" aria-label="Ver en marco">Ver en marco</button>
-      </article>
-      <!-- Milestone 3 -->
-      <article class="milestone" aria-labelledby="ms3-title">
-        <h3 id="ms3-title" class="sr-only">Ruta hacia el Rus</h3>
-        <figure class="milestone-figure" aria-label="Comercio vikingos con Rus y Bizancio">
-          <div class="img-wrap">
-            <img src="imagenes/Las rutas del Rus.png" alt="Ruta vikinga hacia Rus y comercio con Bizancio" />
-          </div>
-          <figcaption>
-            IX-X: Las rutas del Rus permitieron el intercambio con Bizancio y el desarrollo de ciudades como Novgorod y Kiev.
-          </figcaption>
-        </figure>
-        <button class="open-frame" data-idx="2" aria-label="Ver en marco">Ver en marco</button>
-      </article>
-      <!-- Milestone 4 -->
-      <article class="milestone" aria-labelledby="ms4-title">
-        <h3 id="ms4-title" class="sr-only">Vinland</h3>
-        <figure class="milestone-figure" aria-label="Exploraciones hacia Groenlandia y Vinland">
-          <div class="img-wrap">
-            <img src="imagenes/Groenlandia.jpg" alt="Exploraciones hacia Groenlandia y Vinland" />
-          </div>
-          <figcaption>
-            X: Exploración hacia Groenlandia y Vinland (descubrimientos en Norteamérica por Leif Erikson) expandieron el comercio y la curiosidad.
-          </figcaption>
-        </figure>
-        <button class="open-frame" data-idx="3" aria-label="Ver en marco">Ver en marco</button>
-      </article>
-      <!-- Milestone 5 -->
-      <article class="milestone" aria-labelledby="ms5-title">
-        <h3 id="ms5-title" class="sr-only">Cristianización</h3>
-        <figure class="milestone-figure" aria-label="Cristianización de Escandinavia">
-          <div class="img-wrap">
-            <img src="imagenes/Cristianización de Escandinavia.jpg" alt="Cristianización de Escandinavia" />
-          </div>
-          <figcaption>
-            siglo X-XI: Cristianización de Escandinavia y consolidación de reinos medievales (Dinamarca, Noruega, Suecia).
-          </figcaption>
-        </figure>
-        <button class="open-frame" data-idx="4" aria-label="Ver en marco">Ver en marco</button>
-      </article>
-    </section>
-    <section id="acerca" class="acerca" aria-labelledby="acerca-title">
-      <h2 id="acerca-title" class="section-title">Acerca de</h2>
-      <p>Este ejemplo presenta cinco hitos históricos del pueblo vikingo usando HTML5 semántico, CSS moderno y un poco de JavaScript para animaciones y tema oscuro.</p>
-    </section>
-  </main>
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p>&copy; 2026 Vikingos. Conocimiento histórico y visual. Ilustraciones propias (SVG).</p>
-    </div>
-  </footer>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#171a1b">
+    <meta
+      name="description"
+      content="Recorrido académico por cinco hitos de la historia vikinga: Lindisfarne, Jórvik, las rutas del Rus, Vinland y la cristianización de Escandinavia."
+    >
+    <meta
+      name="keywords"
+      content="vikingos, historia vikinga, Lindisfarne, Jórvik, Rus, Vinland, cristianización de Escandinavia"
+    >
+    <meta name="author" content="afrivillas">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:title" content="Los cinco hitos legendarios de los vikingos">
+    <meta
+      property="og:description"
+      content="Una síntesis visual, verificable y documentada de cinco momentos decisivos de la historia vikinga."
+    >
+    <meta property="og:image" content="resources/Lindisfarne.webp">
+    <title>Los cinco hitos legendarios de los vikingos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json" id="structuredData">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Los cinco hitos legendarios de los vikingos",
+        "description": "Recorrido académico por cinco hitos decisivos de la historia vikinga.",
+        "inLanguage": "es",
+        "author": {
+          "@type": "Person",
+          "name": "afrivillas"
+        },
+        "about": [
+          "Era vikinga",
+          "Lindisfarne",
+          "Jórvik",
+          "Rus de Kiev",
+          "Vinland",
+          "Cristianización de Escandinavia"
+        ]
+      }
+    </script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
-  <!-- Frame viewer (modal) -->
-  <div id="frameModal" class="frame-modal" aria-hidden="true" role="dialog" aria-label="Vista ampliada">
-    <div class="frame-content">
-      <button class="frame-close" aria-label="Cerrar">X</button>
-      <div id="frameInner" class="frame-inner"></div>
-    </div>
-  </div>
-</body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <span class="brand-mark" aria-hidden="true">V</span>
+          <span>Los cinco hitos legendarios de los vikingos</span>
+        </a>
+
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Activar modo oscuro"
+        >
+          <span class="theme-icon" aria-hidden="true"></span>
+          <span class="theme-label">Modo oscuro</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" id="inicio" aria-labelledby="pageTitle">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <h1 id="pageTitle">Cinco hitos del pueblo vikingo</h1>
+            <div class="ornament" aria-hidden="true"><span></span><b>ᛟ</b><span></span></div>
+            <p>
+              Entre los siglos VIII y XI, las sociedades escandinavas conectaron
+              territorios desde el Atlántico Norte hasta Bizancio. Este recorrido
+              presenta cinco episodios que permiten entender su expansión, sus
+              redes comerciales y su transformación política y religiosa.
+            </p>
+          </div>
+          <div class="hero-ship" aria-hidden="true">
+            <span class="sail"></span>
+            <span class="mast"></span>
+            <span class="hull"></span>
+            <span class="wave wave-one"></span>
+            <span class="wave wave-two"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="milestones" aria-label="Cinco hitos históricos">
+        <div id="milestoneList"></div>
+      </section>
+
+      <section class="references" id="referencias" aria-labelledby="referencesTitle">
+        <div class="references-inner">
+          <h2 id="referencesTitle">Referencias</h2>
+          <div class="ornament ornament-centered" aria-hidden="true">
+            <span></span><b>ᛟ</b><span></span>
+          </div>
+          <p class="references-intro">
+            Fuentes institucionales y académicas consultadas. Las referencias se
+            presentan en una adaptación web de las normas APA (7.ª edición).
+          </p>
+          <ol class="reference-list" id="referenceList"></ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span class="footer-ornament" aria-hidden="true">— ᛟ —</span>
+      <p>Creado por: afrivillas</p>
+    </footer>
+
+    <dialog class="story-modal" id="storyModal" aria-labelledby="modalTitle">
+      <div class="modal-shell">
+        <button class="modal-close" id="modalClose" type="button" aria-label="Cerrar historia">
+          <span aria-hidden="true">×</span>
+        </button>
+        <div class="modal-media">
+          <img id="modalImage" src="" alt="">
+        </div>
+        <article class="modal-body">
+          <p class="modal-date" id="modalDate"></p>
+          <h2 id="modalTitle"></h2>
+          <div class="ornament" aria-hidden="true"><span></span><b>ᛟ</b><span></span></div>
+          <p id="modalDescription"></p>
+          <a id="modalSource" class="source-link" href="#" target="_blank" rel="noopener noreferrer">
+            Consultar fuente principal
+          </a>
+        </article>
+      </div>
+    </dialog>
+
+    <noscript>
+      <p class="noscript-message">
+        Esta experiencia necesita JavaScript para mostrar los cinco hitos y sus
+        lecturas ampliadas. Las fuentes académicas permanecen disponibles en la
+        sección de referencias.
+      </p>
+    </noscript>
+  </body>
 </html>
